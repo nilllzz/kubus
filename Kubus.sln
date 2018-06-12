@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kubus", "Kubus\Kubus.csproj", "{A75EB624-65FF-47C5-8612-1DDA6232BBD4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{E505F70B-2013-43A2-BBB1-FE4BED80C2E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameDevCommon", "lib\game-dev-common\src\GameDevCommon\GameDevCommon.csproj", "{087378EE-7591-47CE-979F-6824FC0606EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{A75EB624-65FF-47C5-8612-1DDA6232BBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A75EB624-65FF-47C5-8612-1DDA6232BBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A75EB624-65FF-47C5-8612-1DDA6232BBD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{087378EE-7591-47CE-979F-6824FC0606EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087378EE-7591-47CE-979F-6824FC0606EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087378EE-7591-47CE-979F-6824FC0606EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087378EE-7591-47CE-979F-6824FC0606EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{087378EE-7591-47CE-979F-6824FC0606EF} = {E505F70B-2013-43A2-BBB1-FE4BED80C2E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE065AE4-152D-47FC-B8F1-23C06004B0B3}

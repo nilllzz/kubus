@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A75EB624-65FF-47C5-8612-1DDA6232BBD4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Kubus</RootNamespace>
     <AssemblyName>Kubus</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -30,8 +30,41 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Core</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core.cs" />
+    <Compile Include="GameController.cs" />
+    <Compile Include="Game\Cube.cs" />
+    <Compile Include="Game\CubeColorHelper.cs" />
+    <Compile Include="Game\CubeProjection.cs" />
+    <Compile Include="Game\GameObject.cs" />
+    <Compile Include="Game\Level.cs" />
+    <Compile Include="Game\MainCube.cs" />
+    <Compile Include="Game\MainCubeFace.cs" />
+    <Compile Include="Screens\InGame\GameOverLetters.cs" />
+    <Compile Include="Screens\InGame\InGameCamera.cs" />
+    <Compile Include="Screens\InGame\InGameScreen.cs" />
+    <Compile Include="Screens\Screen.cs" />
+    <Compile Include="Screens\ScreenManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\game-dev-common\src\GameDevCommon\GameDevCommon.csproj">
+      <Project>{087378ee-7591-47ce-979f-6824fc0606ef}</Project>
+      <Name>GameDevCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.6.0.1625\lib\net40\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
